@@ -43,5 +43,22 @@ pipeline
                                       jacoco()       
                                     }
                             }
+                    stage("Quality Status Check")
+                                {
+                                 steps
+                                                {
+                                                        timeout (time: 3, unit: 'MINUTES')
+                                                                {
+                                                                        script
+                                                                                        {
+                                                                                                def qg = waitForQualityGate()
+                                                                                                if (qg.status != 'OK')
+                                                                                                        {
+                                                                                                                error "Pipeline aborted due to Quality Gate Failure: ${qg.status}"
+                                                                                                        }
+                                                                                        }
+                                                                }	
+                                                }
+                                }
                 }
         }
