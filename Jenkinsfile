@@ -64,5 +64,14 @@ pipeline
                                                                 }	
                                                 }
                                 }
+                     stage ("Email Notification")
+						{
+							steps
+									{
+										mail bcc: '', body: '''Hi Welcome to Jenkins Email Alerts
+										Thanks
+										Prashanth''', cc:'', from: '', replyTo:'', subject: 'Jenkins Job', to: 'prashanth.konakala@bluepal.com'
+									}
+						}
                 }
         }
