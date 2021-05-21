@@ -65,13 +65,13 @@
 		            <excludes>
 		              <exclude>com.asimio.demo.Application</exclude>
 		            </excludes>
-		            <limits>
+		          <!--  <limits>
 		              <limit>
 		                <counter>LINE</counter>
 		                <value>COVEREDRATIO</value>
 		                <minimum>50%</minimum>
 		              </limit>
-		            </limits>
+		            </limits> -->
 		          </rule>
 		        </rules>
 		      </configuration>
