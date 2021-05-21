@@ -27,7 +27,7 @@ pipeline
                                                         def scannerHome = tool 'sonarqube';
                                                         withSonarQubeEnv("Sonarqube_Pipeline")
                                                         {
-                                                         sh 'mvn clean install -f pom.xml'
+                                                        // sh 'mvn clean install -f pom.xml'
                                                          sh " mvn -f pom.xml sonar:sonar \
                                                               -Dsonar.projectName=Sonarqube_Jenkinsfile_Pipeline \
                                                               -Dsonar.projectKey=Sonarqube_Jenkinsfile_Pipeline \
