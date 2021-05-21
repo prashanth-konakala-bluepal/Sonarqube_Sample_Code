@@ -54,7 +54,7 @@ pipeline
                                                                                                 def qg = waitForQualityGate()
                                                                                                 if (qg.status != 'OK')
                                                                                                         {
-                                                                                                                error "Pipeline aborted due to Quality Gate Failure: ${qg.status}"
+                                                                                                                print "Pipeline Not Executed due to Quality Gate Failure: ${qg.status}"
                                                                                                         }
                                                                                                 else //(qg.status = 'OK')
                                                                                                         {
